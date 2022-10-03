@@ -10,9 +10,14 @@
 
 #CH - Movimiento de un Objeto
 
->> Consigna: Se deberá crear un script que permite que un objeto realice 2 tareas distintas: 
-* Al darle play, cambie su escala a un nuevo valor (modificable por inspector) 
-* Con cada frame se mueva en una dirección y con una velocidad determinadas (también modificables desde el inspector).
+>> Consigna: Se deberá hacer un script que contenga las variables: vida, velocidad, dirección. 
+Además, deberá contener : 
+* Un método que controle el movimiento
+* Un método que cure al jugador (suba el valor de la vida) 
+* Un método que dañe al jugador (baje el valor de la vida). 
+
+No es necesario que estén implementados (es decir, que hagan algo al darle play) pero si es necesario que se encuentren bien armados. 
+Pueden valerse de los métodos Start y Update para probar si sus métodos funcionan
 
 >>Aspectos a incluir en el entregable:
 Se debe entregar el proyecto entero, revisando que estén presentes el objeto a ser modificado, el script pedido y este último unido al objeto.
