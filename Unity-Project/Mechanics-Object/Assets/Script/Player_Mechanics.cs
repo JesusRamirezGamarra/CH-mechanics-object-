@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player_Mechanics : MonoBehaviour
 {
     private int life = 100;
-    private float speedMove = 0.05f;
+    private float speedMove = 0.5f;
     private Vector3 direction;
 
     private bool isHPIncrementForKey = false;
@@ -54,7 +54,7 @@ public class Player_Mechanics : MonoBehaviour
             Debug.Log("Colisiono :  Pared derecha");
             h= 0.5f;
         }
-        if (  playerPos.x >= 9.5f ){
+        else if (  playerPos.x >= 9.5f ){
             Debug.Log("Colisiono :  Pared Izquierda"); 
             h= -0.5f;
         }    
@@ -69,7 +69,7 @@ public class Player_Mechanics : MonoBehaviour
         Debug.DrawRay(transform.position,new Vector3( 0, 1, 0) * 5, Color.red );
         Debug.DrawRay(transform.position,new Vector3( 0, -1, 0) * 5, Color.red );
             
-        transform.Translate( h , v, 0);
+        transform.Translate( h * Time.deltaTime , v * Time.deltaTime, 0);
         
     }
 
