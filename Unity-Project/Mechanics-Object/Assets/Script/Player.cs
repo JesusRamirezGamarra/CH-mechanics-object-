@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     public Vector3 changeScale = new Vector3(-0.001f,-0.001f,-0.001f);
     public Vector3 moveDirection = new Vector3(0f,0f,0f);
-    public Vector3 moveSpeed =new Vector3(0f,0f,0f);
+    // public Vector3 moveSpeed =new Vector3(0f,0f,0f);
+    public float moveSpeed = 1.0f;
     
 
     void Start()
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
 
         //con cada frame se mueva en una dirección y con una velocidad determinadas (también modificables desde el inspector).
         // https://www.youtube.com/watch?v=8rziy9rwQtI   :  Timne.time vs Time.DeltaTime
-        transform.Translate(moveSpeed * Time.deltaTime , Space.World);
-        
+        // transform.Translate(moveSpeed * Time.deltaTime , Space.World);
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime , Space.World);
     }
 }
